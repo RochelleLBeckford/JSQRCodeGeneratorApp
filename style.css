@@ -1,0 +1,175 @@
+/* & Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;1,400;500;600;1,600&display=swap');
+
+/* & Page Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif ;
+}
+
+body {
+    background: #1c1e26;
+    max-width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+section {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+input[type="color"] {
+    border: none;
+    width: 32.5%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+/* & Style the various sizes for the QR Code */
+.sizes {
+    width: 32.5%;
+    height: 40px;
+    color: #fff;
+    background: #181b29;
+    border: 1px solid #414866;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    outline: none;
+}
+
+.qr-text {
+    padding: 1rem;
+    display: block;
+    background: #181b29;
+    border: 1px solid #414866;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* width: 100%; */
+    width: 100%;
+    margin: 0.5rem 0 1rem 0;
+    text-align: center;
+    color: #fff;
+    outline: none;
+}
+
+.qr-text::placeholder {
+    color: #8b92b7;
+    font-weight: 500;
+}
+
+/* & Style the QR code */
+#qr-code {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #414866;
+}
+
+#qr-code img, #qr-code canvas {
+    /* 
+    ~ !important
+        ~ overrides all previous styling rules for the specified property
+        ~ adds more importance to the said property/value than normal 
+    */
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+/* & Style the container for the buttons */
+.action-container {
+    display: flex;
+    margin: 1rem 0;
+}
+
+/* & remove the hyperlink line from the anchor tag */
+a {
+    text-decoration: none;
+}
+
+/* & Style the Buttons */
+.btn {
+    color: #fff;
+    max-width: 200px;
+    padding: 14px;
+    /* background: linear-gradient(50deg, #c8efd6 0%, #f8bdd6 50%, #acc8e9 100%); */
+    background: linear-gradient(50deg, #8360c3 20%, #2ebf91 80%);
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    flex: 1;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+/* & Target the img tag that is within the .btn class */
+.btn img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.share-btn {
+    margin-left: 0.7rem;
+}
+
+/* & Make the page responsive */
+@media (max-width:512px) {
+    body {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    #qr-code {
+        width: 95vw;
+        height: 95vw;
+    }
+
+    #qr-code img, #qr-code canvas {
+        max-width: 95vw !important;
+        max-height: 95vw !important;
+    }
+
+    .btn {
+        /* ~ unset 
+            ~ changes the element or parent value to it's parent value if it can be inherited.
+            ~ if it can not be inherited then to it's original value
+        */
+        min-width: unset;
+    }
+}
+
+@media (max-width: 350px) {
+    .action-container {
+        flex-direction: column;
+    }
+
+    .share-btn {
+        margin-left: 0;
+        margin-top: 0.7rem;
+    }
+}

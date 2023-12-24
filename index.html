@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- & Link CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <title>JS QR Code Generator</title>
+</head>
+<body>
+    
+    <section>
+        <div class="row">
+            <input type="color" class="light" value="#ffffff">
+            <input type="color" class="dark">
+
+            <select class="sizes">
+                <option value="100">100 x 100</option>
+                <option value="200">200 x 200</option>
+                <option value="300">300 x 300</option>
+                <!-- ~
+                    ~ selected pre-selected value will populate once tha page loads
+                    ~ the pre-selected value will be highlighted in the drop down list
+                ~ -->
+                <option selected value="400">400 x 400</option>
+                <option value="500">500 x 500</option>
+                <option value="600">600 x 600</option>
+                <option value="700">700 x 700</option>
+                <option value="800">800 x 800</option>
+                <option value="900">900 x 900</option>
+                <option value="1000">1000 x 1000</option>
+            </select>
+        </div>
+
+        <input type="text" class="qr-text" placeholder="Enter QR Text">
+        <div id="qr-code"></div>
+
+        <div class="action-container">
+            <!-- ~ href"#" - links to the top of the page--> 
+            <a href="#" class="download btn" download="QRCode">
+                <span>Download</span>
+                <!-- ~ svg - scalable vector graphics -->
+                <img src="download.svg" alt="Download Icon Image">
+            </a>
+            
+            <button class="btn share-btn">
+                <span>Share</span>
+                <img src="share.svg" alt="Share Icon Image">
+            </button>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- & Link Code from CDNJS -> JS Library for making a QR Code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <!-- & Link Js File -->
+    <script src="script.js"></script>
+</body>
+</html>
