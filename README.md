@@ -33,4 +33,4 @@
 
 ---
 
-- [ ] Link for the web application: <a href="">JS QR Code Generator App</a>
+- [ ] Link for the web application: <a href="(https://rlb-js-qr-code-generator.netlify.app/">JS QR Code Generator App</a>
